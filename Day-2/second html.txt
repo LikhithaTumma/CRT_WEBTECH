@@ -1,0 +1,11 @@
+<!doctype html>
+<head> 
+    <tittle> HTML </tittle>
+</head>
+<body>
+    <h1 bgcolor:"green"> HTML FORMATTING TAGS </h1> 
+    <h2><b> bold</b><strong> strong</strong> <i> italic</i><emp> emphasized</emp></h2>
+    <h2><u> underline</u> <mark> highlighted</mark> <del> deleted</del> <ins> inserted</ins></h2>
+    <h2> <small> small</small> h<sub>2</sub>o  x<sup>2</sup></h2>
+    </body>
+    </html>

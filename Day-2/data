@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head> creating a table</head>
+<body>
+    <h1> full forms</h1>
+    <ol type="I"></ol>
+    <li> html</li>
+    <li> css</li>
+    <li> js </li>
+</body>
+</html>
