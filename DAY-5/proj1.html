@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     }
+     body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient( to right top,#ff0f7b,#f89bf8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     h1{
+        font-size: 55px;
+        text-shadow:#f89bf8 ;
+     }
+     .main {
+        width: 25%;
+        height: 70%;
+        padding: 50px 15px;
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 10px 25px -10px rgba(0,0,0,0.5);
+        border-radius: 5px;
+        margin-top: 25px;
+        margin-bottom: 40px;
+     }
+     .main .input {
+        width: 90%;
+        padding: 8px 25px;
+        border:  3px solid #9e9e9e;
+        outline: none;
+        margin: 15px 0;
+     }
+     .main .input:focus {
+        border: 3px solid #f89b29;
+     }
+     .btn,
+     .input {
+        font-size: 1.1rem;
+        border-radius: 5px;
+     }
+     .main .btn {
+        width: 90%;
+        padding: 12px 0;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #ff0f7b;
+        color: #fff;
+        transition: 0.3s;
+     }
+     .main .code {
+        margin: 10px 0;
+     }
+     .main .btn:hover {
+        box-shadow: 0 10px 25px-10px #f89b29;
+
+     }
+     #toast {
+        position: absolute;
+        bottom: 0;
+        border-radius: 5px;
+        padding: 10px 50px;
+        background: greenyellow;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 10px 25px -10px greenyellow;
+        transition: 0.3s;
+        font-size: 20px;
+     }
+     #toast.show {
+        visibility: visible;
+        opacity: 1;
+        bottom: 50px;
+     }
+     
+</style>
+<body>
+    <h1> qr coad generator</h1>
+    <div class="main">
+    <input type="text" name="" id="" class="input" placeholder="enter text here.">
+    <button class=" btn"> generate</button>
+    <img src="https://i.pinimg.com/originals/23/bf/a7/23bfa774eb503426d3278247aa6aaae3.jpg" alt="">
+    <p id="note"> made with by me</p>
+
+
+</div>
+<div id="toast"> successfully geneareted ! ! !</div>
+<script>
+    const btn=document.querySelector('.btn');
+    const  coad =document.querySelector('.code');
+    const input =document.querySelector('.input');
+    const toast =document.querySelector('#toast');
+    btn.addEventListener('click',generate);
+    function generate () {
+        const data=input.value;
+        const URL = 'https://api.qrserver.com/v1/create-qr-coad/?size=150x150&data=${data}';
+        code.src = URL;
+        toastDiv();
+
+    }
+    function toastDiv() {
+        toast.className = " show";
+        setTimeout(function () {
+            toast.className=toast.className.replace("show","")
+            
+        }, 200)
+            
+        
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
